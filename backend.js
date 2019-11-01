@@ -1,7 +1,7 @@
 // post request to get model info for an input image
 async function imagePOST(e) {
 	e.preventDefault();	
-	url = 'http://127.0.0.1:8000/classify_image'
+	url = 'http://acnescan.pythonanywhere.com/classify_image'
 
 	// get image from user
 	const formData = new FormData();
@@ -53,7 +53,7 @@ function displayResults(result) {
 // post request to add email to notification list for when app releases
 async function emailNotificationPOST(e) {
 	e.preventDefault();
-	url = 'http://127.0.0.1:8000/save_email'
+	url = 'http://acnescan.pythonanywhere.com/save_email'
 
 	// get user's email
 	const formData = new FormData();
