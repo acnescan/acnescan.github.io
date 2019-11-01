@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UFT-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<title>Acne Scan</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<a href="index.html"><img src="images/logo.svg" id="logo"></a>
+			<nav>
+				<a href="#" class="hide-desktop"><img src="images/menu.svg" id="menu"></a>
+				<ul class="show-desktop hide-mobile" id="nav">
+					<li id="exit" class="hide-desktop"><img src="images/exit.svg"></li>
+					<li><a href="#">home</a></li>
+					<li><a href="#how-it-works-container">how it works</a></li>
+					<li><a href="#mobile-container">mobile</a></li>
+					<li><a href="#contact-container">contact</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+
+	<div id="home-container" name="home-container">
+		<h1 id="tagline">Anaylze Your Pimples<br>in Seconds<br><button id="try-cta">Try Now</button></h1>
+		<img src="images/phone.svg" id="phone">
+	</div>
+
+	<div id="upload-container" name="home-container">
+		<div class="container">
+			<h2>Upload Your Photo</h2>
+			<form>
+				<input id="choose-file" type="file" name="image" accept="image/*" required>
+				<input id="scan-cta" type="button" value="scan" onclick="imagePOST(event)">
+			</form>
+			<p>Crop your photo down to the acne. 
+				<br>We DO NOT share your photos.
+				<br>Your privacy is important to us.
+			</p>
+		</div>
+	</div>
+
+	<div id="results-container">
+		<div class="container">
+			<div id="loader"></div>
+			<ul id="describe">
+				<li id="blackhead">
+					<h2>Blackhead</h2>
+					<blockquote>A comedo can be open (blackhead) or closed by skin (whitehead) and occur with or without acne. The word comedo comes from the Latin comedere, meaning 'to eat up', and was historically used to describe parasitic worms; in modern medical terminology, it is used to suggest the worm-like appearance of the expressed material (Excerpt from <a href="https://en.wikipedia.org/wiki/Comedo" target="_blank">Wiki page</a>).</blockquote>
+				</li>
+				<li id="clean">
+					<h2>Clean Skin</h2>
+					<p>Your skin looks great! Keep up the work!</p>
+				</li>
+				<li id="papule">
+					<h2>Papule</h2>
+					<blockquote>A papule is a circumscribed, solid elevation of skin with no visible fluid, varying in area from a pinhead to 1 cm.[2][nb 1] It can be brown, purple, pink or red in color, and can cluster into a papular rash. Papules may open when scratched and become infected and crusty. Larger non-blisterform elevated lesions may be termed nodules (Excerpt from <a href="https://en.wikipedia.org/wiki/Papule" target="_blank">Wiki page</a>).</blockquote>
+				</li>
+				<li id="pustule">
+					<h2>Pustule</h2>
+					<blockquote>Pustules describe any red or white lesion elevated above the skin, hair, nails or other surface tissues that contain a cloudy liquid. The liquid is usually, but not always, pus. Pustules can indicate a number of conditions, from the prosaic like acne to the life-threatening such as smallpox. They are also a classic symptom of varicella or any disease with the suffix -pox (such as rickettsialpox). Pustules will normally resolve themselves without treatment, but can cause scarring if they are widespread (Excerpt from <a href="https://house.fandom.com/wiki/Pustules" target="_blank">Wiki page</a>).</blockquote>
+				</li>
+				<li id="whitehead">
+					<h2>Whitehead</h2>
+					<blockquote>A comedo can be open (blackhead) or closed by skin (whitehead) and occur with or without acne. The word comedo comes from the Latin comedere, meaning 'to eat up', and was historically used to describe parasitic worms; in modern medical terminology, it is used to suggest the worm-like appearance of the expressed material (Excerpt from <a href="https://en.wikipedia.org/wiki/Comedo" target="_blank">Wiki page</a>).</blockquote>
+				</li>
+			</ul>
+			<ul id="analysis">
+				<li id="clean-score">Clean Skin: </li>
+				<li id="blackhead-score">Blackhead: </li>
+				<li id="papule-score">Papule: </li>
+				<li id="pustule-score">Pustule: </li>
+				<li id="whitehead-score">Whitehead: </li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="how-it-works-container" name="how-it-works-container">
+		<div class="container">
+			<h2>3 Easy Steps</h2>
+			<ul>
+				<li>
+					<img src="images/camera.svg">
+					<p>Take your acne photo</p>
+				</li>
+			
+				<li>
+					<img src="images/upload.svg">
+					<p>Upload your photo</p>
+				</li>
+				<li>
+					<img src="images/results.svg">
+					<p>Get your results</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="mobile-container" name="mobile-container">
+		<div class="container">
+			<h2>Want the App?</h2>
+			<p>Add your email address, and we'll let you know when it's ready<br>on Android and iOS.</p>
+			<form name="email-notification" method="post" onsubmit="emailNotificationPOST(event)">
+				<input id="mobile-field" type="email" name="email" placeholder="example@domain.com" required>
+				<input id="mobile-cta" type="submit" value="submit">
+			</form>
+		</div>
+	</div>
+
+	<div id="contact-container" name="contact-container">
+		<div class="container">
+			<h2>Let's Talk</h2>
+			<p>We'd love to hear your<br>feedback and questions.</p>
+			<form name="contact-form"  action="https://formspree.io/xrgzowev" method="post">
+				<ul>
+					<li><input type="text" name="name" placeholder="Name" class="contact-user" required></li>
+					<li><input type="email" name="email" placeholder="Email" class="contact-user" required></li>
+					<li><textarea name="message" placeholder="Message" required></textarea></li>
+				</ul>
+			  <input type="submit" value="submit" id="contact-cta">
+			</form>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<a href="#"><img src="images/logo-white.svg" id="logo-white"></a>
+			<p class="address">Waterloo, Ontario <br>Canada</p>
+			<ul class="footer-links">
+				<li><a href="#">Terms of Service</a></li>
+				<li><a href="#">Privacy</a></li>
+			</ul>
+			<p>Copyright © 2019 Acne Scan</p>
+		</div>
+	</footer>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="backend.js"></script>
+</body>
+</html>
