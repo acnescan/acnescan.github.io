@@ -7,11 +7,10 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Acne Scan</title>
 </head>
-
 <body>
 	<div class="container">
 		<header>
-			<a href="index.html"><img src="images/logo.svg" id="logo"></a>
+			<a id="beta" href="index.html"><img src="images/logo.svg" id="logo"> BETA</a>
 			<nav>
 				<a href="#" class="hide-desktop"><img src="images/menu.svg" id="menu"></a>
 				<ul class="show-desktop hide-mobile" id="nav">
@@ -49,23 +48,23 @@
 			<div id="loader"></div>
 			<ul id="describe">
 				<li id="blackhead">
-					<h2>Blackhead</h2>
+					<h2><span class="severity"></span>Blackheads</h2>
 					<blockquote>A comedo can be open (blackhead) or closed by skin (whitehead) and occur with or without acne. The word comedo comes from the Latin comedere, meaning 'to eat up', and was historically used to describe parasitic worms; in modern medical terminology, it is used to suggest the worm-like appearance of the expressed material (Excerpt from <a href="https://en.wikipedia.org/wiki/Comedo" target="_blank">Wiki page</a>).</blockquote>
 				</li>
 				<li id="clean">
-					<h2>Clean Skin</h2>
+					<h2><span class="severity"></span>Clean Skin</h2>
 					<p>Your skin looks great! Keep up the work!</p>
 				</li>
-				<li id="papule">
-					<h2>Papule</h2>
+				<li id="papule">					
+					<h2><span class="severity"></span>Papules</h2>
 					<blockquote>A papule is a circumscribed, solid elevation of skin with no visible fluid, varying in area from a pinhead to 1 cm.[2][nb 1] It can be brown, purple, pink or red in color, and can cluster into a papular rash. Papules may open when scratched and become infected and crusty. Larger non-blisterform elevated lesions may be termed nodules (Excerpt from <a href="https://en.wikipedia.org/wiki/Papule" target="_blank">Wiki page</a>).</blockquote>
 				</li>
-				<li id="pustule">
-					<h2>Pustule</h2>
+				<li id="pustule">					
+					<h2><span class="severity"></span>Pustules</h2>
 					<blockquote>Pustules describe any red or white lesion elevated above the skin, hair, nails or other surface tissues that contain a cloudy liquid. The liquid is usually, but not always, pus. Pustules can indicate a number of conditions, from the prosaic like acne to the life-threatening such as smallpox. They are also a classic symptom of varicella or any disease with the suffix -pox (such as rickettsialpox). Pustules will normally resolve themselves without treatment, but can cause scarring if they are widespread (Excerpt from <a href="https://house.fandom.com/wiki/Pustules" target="_blank">Wiki page</a>).</blockquote>
 				</li>
-				<li id="whitehead">
-					<h2>Whitehead</h2>
+				<li id="whitehead">					
+					<h2><span class="severity"></span>Whiteheads</h2>
 					<blockquote>A comedo can be open (blackhead) or closed by skin (whitehead) and occur with or without acne. The word comedo comes from the Latin comedere, meaning 'to eat up', and was historically used to describe parasitic worms; in modern medical terminology, it is used to suggest the worm-like appearance of the expressed material (Excerpt from <a href="https://en.wikipedia.org/wiki/Comedo" target="_blank">Wiki page</a>).</blockquote>
 				</li>
 			</ul>
@@ -108,6 +107,7 @@
 				<input id="mobile-field" type="email" name="email" placeholder="example@domain.com" required>
 				<input id="mobile-cta" type="submit" value="submit">
 			</form>
+			<div id="email-submit-message"></div>
 		</div>
 	</div>
 

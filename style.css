@@ -72,6 +72,15 @@ h2 {
 	width: 100px;
 }
 
+#beta {
+	font-family: "Impact";
+	letter-spacing: 1px;
+	color: gray;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
 #logo-white {
 	width: 100px;
 }
@@ -247,6 +256,15 @@ h2 {
 #results-container a {
 	color: white;
 	font-weight: bold;
+}
+
+#results-container h2 {
+	font-weight: 600;
+}
+
+.severity {
+	color: white;
+	font-weight: 100;
 }
 
 #describe li {
